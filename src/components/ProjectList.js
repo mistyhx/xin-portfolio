@@ -5,8 +5,7 @@ import { ProjectsData } from "../data/ProjectsData";
 class ProjectList extends Component {
   render() {
     return (
-      <div>
-        <h4 style={{ color: "#454545", fontWeight: 300 }}>Recent Projects</h4>
+      <div className="project-list">
         <ul>
           <li>
             {ProjectsData.map((project, index) => (

@@ -1,8 +1,12 @@
+
 .App {
-  padding:2em;
-  text-align: left;
-  font-family: "Relevant"
+  padding:3em;
+  font-family: "Karla";
+  margin: 0 auto;
+  position:relative;
+
 }
+
 
 h1 {
   font-weight:400;
@@ -21,15 +25,183 @@ ul{
   list-style-type:none;
 }
 
-.ProjectImage{
-  width:300px;
-  height:300px;
-  background-color:#dddddd;
+
+.fade-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 800ms ease-in;
 }
+
+.fade-exit {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 800ms ease-out;
+}
+
+
+
+
+
+.container{
+  max-width: 1200px;
+  position:absolute;
+  left: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.indexNumber{
+  font-size:10em;
+  color: #cacaca;
+  opacity: 0.5;
+  z-index: -99;
+  position: absolute;
+  font-family: "Nothing You Could Do";
+  font-weight:600;
+}
+
+.title{
+  font-size:3em;
+  padding: 30px 0 10px 0;
+}
+
+.category{
+  font-weight:400;
+  text-transform: uppercase;
+}
+
+
+.description{
+  font-size:1.2em;
+  line-height: 1.5em;
+  color: #717171;
+}
+.wrapper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+}
+
+.project-intro{
+  width:300px;
+  padding:5em;
+  text-align: left;
+}
+
+
+.video-container{
+  position: relative;
+  height: 500px;
+  width: 600px;
+  background: grey;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-intro-video {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.dev-design{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.dev-container h1{
+  font-size: 150px;
+  color: rgba(225,225,225, .1);
+  background-image: url("https://s31.postimg.cc/yaze1agjv/abstract-background-canvas-249798.jpg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-sizxe: cover;
+  -webkit-background-clip:text;
+  animation: animate 15s linear infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@keyframes animate {
+  0%{
+    background-position: left 0px top 10px;
+  }
+  40%{
+    background-position: left 800px top 10px;
+  }}
+
+.myintro{
+  margin: 0 auto;
+  width: 50%
+}
+
+.intro-container{
+  margin: 0 auto;
+}
+
+.design-container{
+
+  font-family:"Nothing You Could Do"
+
+}
+
+.project-item:nth-child(even){
+  direction:rtl
+}
+
+
+/*navigation*/
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:white;
+  position: fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  z-index: 2;
+}
+
+.nav-options{
+  display:flex;
+  flex-direction: row;
+  text-align:left;
+  padding-right: 5em;
+
+
+}
+
+.nav-options div{
+  padding:1em;
+  margin:auto;
+}
+
+.logo{
+  padding:1em;
+}
+
+
+
